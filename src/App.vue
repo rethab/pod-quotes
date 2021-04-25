@@ -16,7 +16,7 @@
           target="_blank"
           text
       >
-        <span class="mr-2">Edit on GitHub</span>
+        <span class="mr-2">Add Quotes</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
