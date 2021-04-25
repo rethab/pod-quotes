@@ -6,7 +6,7 @@ export default () => {
                     id: 1,
                     name: 'Acquired LP Show',
                     url: 'https://glow.fm/acquired/'
-                }
+                },
             ]
         },
         episodes() {

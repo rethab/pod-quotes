@@ -7,9 +7,7 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          A collection of memorable quotes from the
-          PodCast <a href="https://www.acquired.fm/">Acquired</a>
-          and its <a href="https://glow.fm/acquired/">LP Show</a>.
+          A collection of memorable quotes from various podcasts
         </p>
       </v-col>
 
