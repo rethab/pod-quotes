@@ -11,7 +11,6 @@
         ></v-text-field>
       </v-card-title>
       <v-data-table
-          dense="true"
           :headers="headers"
           :items="quotes"
           :search="search"
@@ -29,20 +28,25 @@ export default {
     return {
       search: '',
       headers: [
-        {text: 'Date', value: 'episode.date'},
-        {text: 'Episode', value: 'episode.name'},
-        {text: 'By', value: 'by.name'},
-        {text: 'Time', value: 'time'},
-        {text: 'Quote', value: 'quote'},
-        {text: 'Context', value: 'context'},
+        {text: 'Quote', value: 'quote', cellClass: 'font-weight-medium'},
+        {text: 'By', value: 'by.name', cellClass: 'text-caption'},
+        {text: 'Date', value: 'episode.date', cellClass: 'text-caption'},
+        {text: 'Show', value: 'show', cellClass: 'text-caption'},
+        {text: 'Context', value: 'context', cellClass: 'text-caption'},
+        {text: 'Time', value: 'time', cellClass: 'text-caption'},
       ],
     }
   },
   computed: {
     quotes: function () {
       return data().quotes().map(quote => {
+        const episode = data().episodes().find(e => e.id === quote.episodeId);
+        const podcast = data().podcasts().find(p => p.id === episode.podcastId);
+
         quote.by = data().people().find(p => p.id === quote.byId);
-        quote.episode = data().episodes().find(e => e.id === quote.episodeId);
+        quote.episode = episode;
+        quote.show = `${podcast.name} / ${episode.name}`
+
         return quote;
       })
     }
