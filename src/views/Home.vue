@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header/>
-    <Quotes/>
+    <Quotes :quote-id="$route.params.id"/>
   </div>
 </template>
 

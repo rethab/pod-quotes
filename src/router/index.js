@@ -11,6 +11,11 @@ const routes = [
         name: 'home',
         component: Home,
     },
+    {
+        path: '/quote/:id',
+        name: 'quote-details',
+        component: Home,
+    },
 ];
 
 const router = new VueRouter({

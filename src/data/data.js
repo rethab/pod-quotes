@@ -71,6 +71,7 @@ export default () => {
         quotes() {
             return [
                 {
+                    id: 1,
                     episodeId: 1,
                     quoteById: 1,
                     quote: 'If we did not win a game, I did not look at my individual stats',
@@ -78,6 +79,7 @@ export default () => {
                     context: 'playing basketball at harvard / team vs. individual',
                 },
                 {
+                    id: 2,
                     episodeId: 1,
                     quoteById: 1,
                     quote: 'What people are on the bus? How do you bring the new people onto the bus? What seat on the bus? How do yo udevelop or move them from one seat to the next on the bus? When is the time for someone to get off the bus?',
@@ -85,6 +87,7 @@ export default () => {
                     context: 'the people process, of which interviewing is a part',
                 },
                 {
+                    id: 3,
                     episodeId: 1,
                     quoteById: 1,
                     quote: 'When in doubt, throw them out',
@@ -92,6 +95,7 @@ export default () => {
                     context: 'deciding whether to hire a candidate',
                 },
                 {
+                    id: 4,
                     episodeId: 1,
                     quoteById: 1,
                     quote: 'The faster I get my data, the faster I can go and sell. [..] I work to be connected and authtentic and also create a good candidate experience where I can',
@@ -99,6 +103,7 @@ export default () => {
                     context: 'whether she ever goes into sell mode during an interview',
                 },
                 {
+                    id: 5,
                     episodeId: 1,
                     quoteById: 1,
                     quote: 'On a scale of zero to 100, what percent fit are you for this opportunity and why? What are the 3-5 factors?',
@@ -106,6 +111,7 @@ export default () => {
                     context: 'her first interview question. it tells here how much they know about the business / how prepared/enthousiastic they are',
                 },
                 {
+                    id: 6,
                     episodeId: 1,
                     quoteById: 1,
                     quote: 'On a scale of one to ten, what level of interest do you have and why? Ten is you pay me money to have this job and one is I can pay the money',
@@ -113,6 +119,7 @@ export default () => {
                     context: 'second question in interviews',
                 },
                 {
+                    id: 7,
                     episodeId: 2,
                     quoteById: 2,
                     quotedById: 3,
@@ -121,6 +128,7 @@ export default () => {
                     context: 'the most important habit is the one of saving. important commitment for young investors.',
                 },
                 {
+                    id: 8,
                     episodeId: 3,
                     quoteById: 4,
                     quote: '"Who can I get?" is the wrong question. You should start with "Who is the smartest person I know?"',
@@ -128,6 +136,7 @@ export default () => {
                     context: 'how to hire the best people',
                 },
                 {
+                    id: 9,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'Anytime there\'s a very strong reaction to something, there is something there',
@@ -135,6 +144,7 @@ export default () => {
                     context: 'how he realized there\'s something going on with YC. people around him talked very negatively about them',
                 },
                 {
+                    id: 10,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'Why startups fail: It\'s not one thing, it\'s actually five different things and all come together and they become intractable and the plane crashes and kills everyone.',
@@ -142,6 +152,7 @@ export default () => {
                     context: 'startups fail like planes',
                 },
                 {
+                    id: 11,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'It would have been just money, but what we got out of YC was actually the network',
@@ -149,6 +160,7 @@ export default () => {
                     context: 'how (being stanford graduates) they could have raised money without YC',
                 },
                 {
+                    id: 12,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'The interesting thing that is happening is not being written about yet. You\'ll find out about it in like two or three years if you\'re lucky.',
@@ -156,12 +168,14 @@ export default () => {
                     context: 'how to find stuff before other people are onto it',
                 },
                 {
+                    id: 13,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'Don\'t tell me there aren\'t enough smart people. If anything the people are trapped in these systems - basically machines that don\'t allow them to fully realize their potential.',
                     time: '45:10',
                 },
                 {
+                    id: 14,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'It\'s not that things that are hot can\'t be good. It\'s that, if it\'s hot it\'s not necessarily good',
@@ -169,6 +183,7 @@ export default () => {
                     context: 'hotness is not an indicator for whether to put money into something',
                 },
                 {
+                    id: 15,
                     episodeId: 3,
                     quoteById: 5,
                     quotedById: 4,
@@ -176,6 +191,7 @@ export default () => {
                     time: '52:55',
                 },
                 {
+                    id: 16,
                     episodeId: 3,
                     quoteById: 4,
                     quote: 'Really good engineers are gonna go and remake all of the planet.',

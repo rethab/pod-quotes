@@ -36,10 +36,10 @@
 <script>
 export default {
   name: 'Quote',
-  props: ['quote'],
+  props: ['quote', 'showContextInitial'],
   data() {
     return {
-      showContext: false,
+      showContext: this.showContextInitial,
     }
   },
   computed: {
@@ -48,8 +48,9 @@ export default {
       if (this.quote.by.twitter) {
         by += ` (@${this.quote.by.twitter})`;
       }
+      let link = `https://podquotes.io/quote/${this.quote.id}`;
 
-      const text = `"${this.quote.quote}"\n- ${by}\n\nvia @podquotesio`;
+      const text = `"${this.quote.quote}"\n- ${by}\n\n${link}`;
       return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`
     }
   }
