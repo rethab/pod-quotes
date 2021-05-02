@@ -25,19 +25,25 @@
             v-model="selectedPersonId"
         ></v-autocomplete>
       </v-card-title>
-      <v-data-table
-          :headers="headers"
-          :items="quotes"
-      ></v-data-table>
+      <v-card-text>
+        <Quote
+            v-for="(quote, key) in quotes"
+            :quote="quote"
+            :key="key"
+            class="mb-2"
+        />
+      </v-card-text>
     </v-card>
   </v-container>
 </template>
 
 <script>
 import data from '@/data/data.js';
+import Quote from '@/components/Quote';
 
 export default {
   name: 'Quotes',
+  components: {Quote},
   data() {
     return {
       selectedPodcastId: null,
@@ -70,6 +76,7 @@ export default {
 
       quote.by = data().people().find(p => p.id === quote.quoteById);
       quote.episode = episode;
+      quote.podcast = podcast;
       quote.show = `${podcast.name} / ${episode.name}`
 
       return quote;

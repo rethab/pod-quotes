@@ -49,22 +49,22 @@ export default () => {
                 {
                     id: 2,
                     name: 'Warren Buffet',
-                    twitter: 'https://twitter.com/WarrenBuffett'
+                    twitter: 'WarrenBuffett'
                 },
                 {
                     id: 3,
                     name: 'Paul Merriman',
-                    twitter: 'https://twitter.com/SavvyInvestorPM'
+                    twitter: 'SavvyInvestorPM'
                 },
                 {
                     id: 4,
                     name: 'Garry Tan',
-                    twitter: 'https://twitter.com/garrytan'
+                    twitter: 'garrytan'
                 },
                 {
                     id: 5,
                     name: 'Matt Cohler',
-                    twitter: 'https://twitter.com/mattcohler'
+                    twitter: 'mattcohler'
                 },
             ]
         },

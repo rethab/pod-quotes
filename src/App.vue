@@ -22,26 +22,21 @@
     </v-app-bar>
 
     <v-main>
-      <Header/>
+      <!-- <Header/> -->
       <Quotes/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Header from './components/Header';
 import Quotes from './components/Quotes';
 
 export default {
   name: 'App',
 
   components: {
-    Header,
     Quotes,
   },
 
-  data: () => ({
-    //
-  }),
 };
 </script>
