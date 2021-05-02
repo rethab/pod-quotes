@@ -58,7 +58,7 @@ export default {
           .quotes()
           .map(this.joinQuoteData)
           .filter(q => this.selectedPodcastId == null || this.selectedPodcastId === q.episode.podcastId)
-          .filter(q => this.selectedPersonId == null || this.selectedPersonId === q.byId)
+          .filter(q => this.selectedPersonId == null || this.selectedPersonId === q.quoteById)
     },
     podcasts: () => data().podcasts(),
     people: () => data().people(),
@@ -68,7 +68,7 @@ export default {
       const episode = data().episodes().find(e => e.id === quote.episodeId);
       const podcast = data().podcasts().find(p => p.id === episode.podcastId);
 
-      quote.by = data().people().find(p => p.id === quote.byId);
+      quote.by = data().people().find(p => p.id === quote.quoteById);
       quote.episode = episode;
       quote.show = `${podcast.name} / ${episode.name}`
 
