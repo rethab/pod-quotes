@@ -56,8 +56,7 @@ export default {
   },
   computed: {
     quotes: function () {
-      return data()
-          .quotes()
+      return this.shuffle(data().quotes())
           .map(this.joinQuoteData)
           .filter(q => this.selectedPodcastId == null || this.selectedPodcastId === q.episode.podcastId)
           .filter(q => this.selectedPersonId == null || this.selectedPersonId === q.quoteById)
@@ -76,6 +75,13 @@ export default {
       quote.show = `${podcast.name} / ${episode.name}`
 
       return quote;
+    },
+    shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
   }
 }
