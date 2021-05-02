@@ -61,6 +61,11 @@ export default () => {
                     name: 'Garry Tan',
                     twitter: 'https://twitter.com/garrytan'
                 },
+                {
+                    id: 5,
+                    name: 'Matt Cohler',
+                    twitter: 'https://twitter.com/mattcohler'
+                },
             ]
         },
         quotes() {
@@ -159,9 +164,23 @@ export default () => {
                 {
                     episodeId: 3,
                     quoteById: 4,
-                    quote: '',
-                    time: '',
-                    context: '',
+                    quote: 'It\'s not that things that are hot can\'t be good. It\'s that, if it\'s hot it\'s not necessarily good',
+                    time: '51:17',
+                    context: 'hotness is not an indicator for whether to put money into something',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 5,
+                    quotedById: 4,
+                    quote: 'Venture capital is not about seeing the future, it\'s about seeing the present very clearly.',
+                    time: '52:55',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: 'Really good engineers are gonna go and remake all of the planet.',
+                    time: '1:09:16',
+                    context: 'he\'s very long on software',
                 },
             ]
         }
