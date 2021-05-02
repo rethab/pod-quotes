@@ -47,7 +47,7 @@ import Quote from '@/components/Quote';
 
 export default {
   name: 'Quotes',
-  components: {Quote},
+  components: { Quote },
   data() {
     return {
       selectedPodcastId: null,

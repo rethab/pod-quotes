@@ -1,8 +1,7 @@
 <template>
 
   <v-card dark dense color="primary">
-    <v-card-title class="pb-1 caption font-weight-light">{{ quote.episode.name }}</v-card-title>
-    <v-card-title class="pt-0 caption font-weight-light">{{ quote.podcast.name }}</v-card-title>
+    <v-card-title class="caption font-weight-light">{{ quote.podcast.name }}</v-card-title>
     <v-card-text class="pb-0 white--text">
       <span class="headline font-weight-bold white--text">
       "{{ quote.quote }}"
@@ -10,14 +9,27 @@
       <br/>
       <span>- {{ quote.by.name }}</span>
     </v-card-text>
-    <v-card-actions class="pr-4 pb-4">
+    <v-card-actions class="">
+      <v-btn
+          text
+          @click="showContext = !showContext"
+          class="blue--text text--lighten-2"
+      >
+        <span v-if="!showContext"><v-icon>mdi-chevron-down</v-icon> Context</span>
+        <span v-else><v-icon>mdi-chevron-up</v-icon> Hide</span>
+      </v-btn>
       <v-spacer/>
-      <span>
+      <span class="">
         <v-btn :href="tweetLink" color="secondary" target="_blank">
-        Tweet this <v-icon class="ml-2">mdi-twitter</v-icon>
+          Tweet this <v-icon class="ml-2">mdi-twitter</v-icon>
         </v-btn>
       </span>
     </v-card-actions>
+    <v-card-text v-if="showContext">
+      <span class="font-weight-bold">Episode:</span> {{ quote.episode.name }}<br/>
+      <span class="font-weight-bold">Time:</span> {{ quote.time }}<br/>
+      <span class="font-weight-bold">Context:</span> {{ quote.context }}<br/>
+    </v-card-text>
   </v-card>
 </template>
 
@@ -25,7 +37,11 @@
 export default {
   name: 'Quote',
   props: ['quote'],
-
+  data() {
+    return {
+      showContext: false,
+    }
+  },
   computed: {
     tweetLink: function () {
       let by = this.quote.by.name;

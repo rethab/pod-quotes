@@ -23,23 +23,14 @@
     </v-app-bar>
 
     <v-main>
-      <Header/>
-      <Quotes/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Quotes from '@/components/Quotes';
-import Header from '@/components/Header';
 
 export default {
   name: 'App',
-
-  components: {
-    Header,
-    Quotes,
-  },
-
 };
 </script>
