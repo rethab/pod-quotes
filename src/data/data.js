@@ -30,6 +30,13 @@ export default () => {
                     name: 'Paul Merriman: We\'re Talking Millions',
                     url: 'https://rationalreminder.libsyn.com/paul-merriman-were-talking-millions-ep147'
                 },
+                {
+                    id: 3,
+                    podcastId: 1,
+                    date: '2020-09-29',
+                    name: 'How YC Rewrote the Seed Playbook with Garry Tan',
+                    url: 'https://www.acquired.fm/episodes/how-yc-rewrote-the-seed-playbook-with-garry-tan'
+                },
             ]
         },
         people() {
@@ -48,6 +55,11 @@ export default () => {
                     id: 3,
                     name: 'Paul Merriman',
                     twitter: 'https://twitter.com/SavvyInvestorPM'
+                },
+                {
+                    id: 4,
+                    name: 'Garry Tan',
+                    twitter: 'https://twitter.com/garrytan'
                 },
             ]
         },
@@ -102,6 +114,54 @@ export default () => {
                     quote: 'You don\'t save what\'s left over after spending. You spend what\'s left over after saving.',
                     time: '52:55',
                     context: 'the most important habit is the one of saving. important commitment for young investors.',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: '"Who can I get?" is the wrong question. You should start with "Who is the smartest person I know?"',
+                    time: '8:26',
+                    context: 'how to hire the best people',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: 'Anytime there\'s a very strong reaction to something, there is something there',
+                    time: '14:56',
+                    context: 'how he realized there\'s something going on with YC. people around him talked very negatively about them',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: 'Why startups fail: It\'s not one thing, it\'s actually five different things and all come together and they become intractable and the plane crashes and kills everyone.',
+                    time: '23:25',
+                    context: 'startups fail like planes',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: 'It would have been just money, but what we got out of YC was actually the network',
+                    time: '24:23',
+                    context: 'how (being stanford graduates) they could have raised money without YC',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: 'The interesting thing that is happening is not being written about yet. You\'ll find out about it in like two or three years if you\'re lucky.',
+                    time: '30:30',
+                    context: 'how to find stuff before other people are onto it',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: 'Don\'t tell me there aren\'t enough smart people. If anything the people are trapped in these systems - basically machines that don\'t allow them to fully realize their potential.',
+                    time: '45:10',
+                },
+                {
+                    episodeId: 3,
+                    quoteById: 4,
+                    quote: '',
+                    time: '',
+                    context: '',
                 },
             ]
         }
