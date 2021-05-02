@@ -5,7 +5,7 @@
         color="primary"
         dark
     >
-      <div class="d-flex align-center">
+      <div class="d-flex align-center font-weight-bold">
         <span>Pod Quotes</span>
       </div>
 
@@ -15,26 +15,29 @@
           href="https://github.com/rethab/pod-quotes"
           target="_blank"
           text
+          class="caption font-weight-light"
       >
         <span class="mr-2">Add Quotes</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon small class="mb-1">mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <!-- <Header/> -->
+      <Header/>
       <Quotes/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Quotes from './components/Quotes';
+import Quotes from '@/components/Quotes';
+import Header from '@/components/Header';
 
 export default {
   name: 'App',
 
   components: {
+    Header,
     Quotes,
   },
 

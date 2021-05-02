@@ -1,18 +1,7 @@
 <template>
   <v-container>
-    <v-card>
+    <v-card elevation="0" >
       <v-card-title>
-        <v-autocomplete
-            class="mr-2"
-            filled
-            rounded
-            clearable
-            item-value="id"
-            item-text="name"
-            label="Podcast"
-            :items="podcasts"
-            v-model="selectedPodcastId"
-        ></v-autocomplete>
         <v-autocomplete
             class="mr-2"
             filled
@@ -24,14 +13,29 @@
             :items="people"
             v-model="selectedPersonId"
         ></v-autocomplete>
+        <v-autocomplete
+            class="mr-2"
+            filled
+            rounded
+            clearable
+            item-value="id"
+            item-text="name"
+            label="Podcast"
+            :items="podcasts"
+            v-model="selectedPodcastId"
+        ></v-autocomplete>
       </v-card-title>
       <v-card-text>
-        <Quote
-            v-for="(quote, key) in quotes"
-            :quote="quote"
-            :key="key"
+        <v-row>
+          <v-col
             class="mb-2"
-        />
+            v-for="(quote, key) in quotes"
+            :key="key"
+            cols="12"
+            md="6">
+            <Quote :quote="quote"/>
+          </v-col>
+        </v-row>
       </v-card-text>
     </v-card>
   </v-container>
@@ -48,14 +52,6 @@ export default {
     return {
       selectedPodcastId: null,
       selectedPersonId: null,
-      headers: [
-        {text: 'Quote', value: 'quote', cellClass: 'font-weight-medium'},
-        {text: 'By', value: 'by.name', cellClass: 'text-caption'},
-        {text: 'Date', value: 'episode.date', cellClass: 'text-caption'},
-        {text: 'Show', value: 'show', cellClass: 'text-caption'},
-        {text: 'Context', value: 'context', cellClass: 'text-caption'},
-        {text: 'Time', value: 'time', cellClass: 'text-caption'},
-      ],
     }
   },
   computed: {

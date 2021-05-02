@@ -1,16 +1,11 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Pod Quotes
-        </h1>
-
-        <p class="subheading font-weight-regular">
-          A collection of memorable quotes from various podcasts
-        </p>
+  <v-container class="pb-0">
+    <v-row dense class="text-center">
+      <v-col class="mb-2">
+        <span class="subtitle-1 font-italic">
+          follow <a href="https://twitter.com/podquotesio">@podquotesio</a> for daily quotes
+        </span>
       </v-col>
-
     </v-row>
   </v-container>
 </template>

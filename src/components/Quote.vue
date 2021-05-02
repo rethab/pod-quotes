@@ -7,14 +7,14 @@
       <span class="headline font-weight-bold white--text">
       "{{ quote.quote }}"
       </span>
-      <br />
-      <span>- {{quote.by.name}}</span>
+      <br/>
+      <span>- {{ quote.by.name }}</span>
     </v-card-text>
     <v-card-actions class="pr-4 pb-4">
       <v-spacer/>
       <span>
-        <v-btn icon :href="tweetLink" target="_blank">
-          <v-icon>mdi-twitter</v-icon>
+        <v-btn :href="tweetLink" color="secondary" target="_blank">
+        Tweet this <v-icon class="ml-2">mdi-twitter</v-icon>
         </v-btn>
       </span>
     </v-card-actions>
