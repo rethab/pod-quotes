@@ -1,24 +1,5 @@
-# pod-quotes
+# podquotes.io
 
-## Project setup
-```
-npm install
-```
+This is the source for [podquotes.io](https://podquotes.io). Follow [@podquotes.io](https://twitter.com/podquotesio) on twitter.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+If you want to add more quotes, please edit the file [data.js](src/data/data.js) and create a PR.
