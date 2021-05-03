@@ -13,8 +13,8 @@
     <v-card-actions class="">
       <v-btn
         text
-        @click="showContext = !showContext"
         class="blue--text text--lighten-2"
+        @click="showContext = !showContext"
       >
         <span v-if="!showContext"
           ><v-icon>mdi-chevron-down</v-icon> Context</span

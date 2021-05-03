@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-overlay :value="!!singleQuote" :opacity="0.85">
-      <v-card elevation="0" color="transparent" v-click-outside="closeOverlay">
+      <v-card v-click-outside="closeOverlay" elevation="0" color="transparent">
         <v-card-actions color="white" class="pb-0">
           <v-spacer />
           <v-btn icon large dark @click="closeOverlay"
@@ -16,6 +16,7 @@
     <v-card elevation="0">
       <v-card-title>
         <v-autocomplete
+          v-model="selectedPersonId"
           class="mr-2"
           filled
           rounded
@@ -24,9 +25,9 @@
           item-text="name"
           label="Author"
           :items="people"
-          v-model="selectedPersonId"
         ></v-autocomplete>
         <v-autocomplete
+          v-model="selectedPodcastId"
           class="mr-2"
           filled
           rounded
@@ -35,15 +36,14 @@
           item-text="name"
           label="Podcast"
           :items="podcasts"
-          v-model="selectedPodcastId"
         ></v-autocomplete>
       </v-card-title>
       <v-card-text>
         <v-row>
           <v-col
-            class="mb-2"
             v-for="(quote, key) in quotes"
             :key="key"
+            class="mb-2"
             cols="12"
             md="6"
           >
