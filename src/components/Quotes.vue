@@ -4,9 +4,9 @@
       <v-card v-click-outside="closeOverlay" elevation="0" color="transparent">
         <v-card-actions color="white" class="pb-0">
           <v-spacer />
-          <v-btn icon large dark @click="closeOverlay"
-            ><v-icon>mdi-close</v-icon></v-btn
-          >
+          <v-btn icon large dark @click="closeOverlay">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
         </v-card-actions>
         <v-card-text class="pt-0">
           <Quote :quote="singleQuote" :show-context-initial="false" />
@@ -62,7 +62,12 @@ import Quote from "@/components/Quote";
 export default {
   name: "Quotes",
   components: { Quote },
-  props: ["quoteId"],
+  props: {
+    quoteId: {
+      type: Number,
+      default: null,
+    },
+  },
   data() {
     return {
       selectedPodcastId: null,

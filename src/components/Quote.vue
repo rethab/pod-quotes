@@ -40,7 +40,10 @@
 <script>
 export default {
   name: "Quote",
-  props: ["quote", "showContextInitial"],
+  props: {
+    quote: { type: Object, required: true },
+    showContextInitial: { type: Boolean, default: false },
+  },
   data() {
     return {
       showContext: this.showContextInitial,
