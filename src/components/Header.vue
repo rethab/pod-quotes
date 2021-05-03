@@ -3,7 +3,8 @@
     <v-row dense class="text-center">
       <v-col class="mb-2">
         <span class="subtitle-1 font-italic">
-          follow <a href="https://twitter.com/podquotesio">@podquotesio</a> for daily quotes
+          follow <a href="https://twitter.com/podquotesio">@podquotesio</a> for
+          daily quotes
         </span>
       </v-col>
     </v-row>
@@ -12,6 +13,6 @@
 
 <script>
 export default {
-  name: 'Header',
-}
+  name: "Header",
+};
 </script>

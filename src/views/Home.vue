@@ -1,20 +1,18 @@
 <template>
   <div>
-    <Header/>
-    <Quotes :quote-id="$route.params.id"/>
+    <Header />
+    <Quotes :quote-id="$route.params.id" />
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header';
-import Quotes from '@/components/Quotes';
+import Header from "@/components/Header";
+import Quotes from "@/components/Quotes";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: { Header, Quotes },
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
