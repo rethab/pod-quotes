@@ -27,5 +27,49 @@
 <script>
 export default {
   name: "App",
+  metaInfo: {
+    title: "Pod Quotes: Memorable Quotes from Inspiring Podcasts",
+    link: [
+      { rel: "canonical", href: "https://podquotes.io", vmid: "canonical" },
+    ],
+    meta: [
+      { vmid: "og:title", property: "og:title", content: "Pod Quotes" },
+      {
+        vmid: "og:site_name",
+        property: "og:site_name",
+        content: "podquotes.io",
+      },
+      { vmid: "og:type", property: "og:type", content: "website" },
+      { vmid: "og:url", property: "og:url", content: "https://podquotes.io" },
+      {
+        vmid: "og:description",
+        property: "og:description",
+        content: "Memorable Quotes from Inspiring Podcasts",
+      },
+      { vmid: "twitter:card", name: "twitter:card", content: "summary" },
+      {
+        vmid: "twitter:site",
+        name: "twitter:site",
+        content: "https://podquotes.io",
+      },
+      { vmid: "twitter:title", name: "twitter:title", content: "Pod Quotes" },
+      {
+        vmid: "twitter:description",
+        name: "twitter:description",
+        content: "Memorable Quotes from Inspiring Podcasts",
+      },
+      {
+        vmid: "twitter:creator",
+        name: "twitter:creator",
+        content: "@podquotesio",
+      },
+      { vmid: "gs:name", itemprop: "name", content: "Pod Quotes" },
+      {
+        vmid: "gs:description",
+        itemprop: "description",
+        content: "Memorable Quotes from Inspiring Podcasts",
+      },
+    ],
+  },
 };
 </script>

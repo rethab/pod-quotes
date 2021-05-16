@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Quotes :quote-id="$route.params.id" />
+    <Quotes :quote-id="parseInt($route.params.id)" />
   </div>
 </template>
 
