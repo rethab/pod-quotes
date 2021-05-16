@@ -41,6 +41,15 @@ export default () => {
           url:
             "https://www.acquired.fm/episodes/how-yc-rewrote-the-seed-playbook-with-garry-tan",
         },
+        {
+          id: 4,
+          podcastId: 1,
+          date: "2021-04-29",
+          name:
+            "Making your customers your secret weapon (with Highspot's Oliver Sharp)",
+          url:
+            "https://www.acquired.fm/episodes/making-your-customers-your-secret-weapon-with-highspots-oliver-sharp",
+        },
       ];
     },
     people() {
@@ -69,6 +78,11 @@ export default () => {
           id: 5,
           name: "Matt Cohler",
           twitter: "mattcohler",
+        },
+        {
+          id: 6,
+          name: "Oliver Sharp",
+          twitter: "ojsharp",
         },
       ];
     },
@@ -221,6 +235,43 @@ export default () => {
             "Really good engineers are gonna go and remake all of the planet.",
           time: "1:09:16",
           context: "he's very long on software",
+        },
+        {
+          id: 16,
+          episodeId: 4,
+          quoteById: 6,
+          quote:
+            "If you're in the middle, you're too big to be protected and too small to matter to the field [sales org].",
+          time: "13:41",
+          context:
+            "Products with this size are difficult to navigate -- very few products become big.",
+        },
+        {
+          id: 17,
+          episodeId: 4,
+          quoteById: 6,
+          quote:
+            'In the early days, we learned the most from customers who said "no". Today, we\'re learning the most from customers who are actually on the platform.',
+          time: "25:15",
+          context:
+            "In the early days, they hadn't built the right products. The people who said no, helped realize that.",
+        },
+        {
+          id: 18,
+          episodeId: 4,
+          quoteById: 6,
+          quote:
+            "Often, what they say they want isn't right, but the need they have is always right.",
+          time: "26:19",
+          context: "Talking to customers, understanding what they really need",
+        },
+        {
+          id: 19,
+          episodeId: 4,
+          quoteById: 6,
+          quote: "",
+          time: "",
+          context: "",
         },
       ];
     },
