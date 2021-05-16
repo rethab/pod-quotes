@@ -20,35 +20,29 @@ export default () => {
           id: 1,
           podcastId: 1,
           date: "2020-05-05",
-          name:
-            "High-performance Hiring & Interviewing with former Amazon Worldwide GM of Prime Membership, Anna Collins",
-          url:
-            "https://www.acquired.fm/episodes/high-performance-hiring-interviewing-with-former-amazon-worldwide-gm-of-prime-membership-anna-collins",
+          name: "High-performance Hiring & Interviewing with former Amazon Worldwide GM of Prime Membership, Anna Collins",
+          url: "https://www.acquired.fm/episodes/high-performance-hiring-interviewing-with-former-amazon-worldwide-gm-of-prime-membership-anna-collins",
         },
         {
           id: 2,
           podcastId: 2,
           date: "2021-04-29",
           name: "Paul Merriman: We're Talking Millions",
-          url:
-            "https://rationalreminder.libsyn.com/paul-merriman-were-talking-millions-ep147",
+          url: "https://rationalreminder.libsyn.com/paul-merriman-were-talking-millions-ep147",
         },
         {
           id: 3,
           podcastId: 1,
           date: "2020-09-29",
           name: "How YC Rewrote the Seed Playbook with Garry Tan",
-          url:
-            "https://www.acquired.fm/episodes/how-yc-rewrote-the-seed-playbook-with-garry-tan",
+          url: "https://www.acquired.fm/episodes/how-yc-rewrote-the-seed-playbook-with-garry-tan",
         },
         {
           id: 4,
           podcastId: 1,
           date: "2021-04-29",
-          name:
-            "Making your customers your secret weapon (with Highspot's Oliver Sharp)",
-          url:
-            "https://www.acquired.fm/episodes/making-your-customers-your-secret-weapon-with-highspots-oliver-sharp",
+          name: "Making your customers your secret weapon (with Highspot's Oliver Sharp)",
+          url: "https://www.acquired.fm/episodes/making-your-customers-your-secret-weapon-with-highspots-oliver-sharp",
         },
       ];
     },
@@ -269,9 +263,20 @@ export default () => {
           id: 19,
           episodeId: 4,
           quoteById: 6,
-          quote: "",
-          time: "",
+          quote:
+            "It's not a question of whether you build a strong relationship with your customers, it's when.",
+          time: "64:54",
           context: "",
+        },
+        {
+          id: 20,
+          episodeId: 4,
+          quoteById: 6,
+          quote:
+            "If you want to get world-class performance out of a team, they have to have some cultural value that has primacy.",
+          time: "69:11",
+          context:
+            "He is not fan of blending multiple functions together in one team. It will be difficult to find a team that is passionately world-class in two things.",
         },
       ];
     },
