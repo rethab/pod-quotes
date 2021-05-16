@@ -74,6 +74,42 @@ export default {
       selectedPersonId: null,
     };
   },
+  metaInfo() {
+    if (this.quoteId) {
+      const prefix = this.singleQuote.by.name;
+
+      // trim quote to SEO-friendly length
+      const quote = this.singleQuote.quote;
+      const trimmedQuote =
+        prefix.length + quote.length > 60
+          ? `${quote.substring(0, 55 - prefix.length)}..`
+          : quote;
+
+      const link = `https://podquotes.io/quote/${this.singleQuote.id}`;
+      const title = `${prefix}: "${trimmedQuote}"`;
+
+      return {
+        title: title,
+        link: [{ rel: "canonical", href: link, vmid: "canonical" }],
+        meta: [
+          { vmid: "og:url", property: "og:url", content: link },
+          {
+            vmid: "og:description",
+            property: "og:description",
+            content: title,
+          },
+          { vmid: "twitter:card", name: "twitter:card", content: "summary" },
+          { vmid: "twitter:site", name: "twitter:site", content: link },
+          {
+            vmid: "twitter:description",
+            name: "twitter:description",
+            content: title,
+          },
+          { vmid: "gs:description", itemprop: "description", content: title },
+        ],
+      };
+    }
+  },
   computed: {
     singleQuote: function () {
       if (!this.quoteId) return;
