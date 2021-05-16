@@ -12,6 +12,7 @@ export default () => {
           name: "The Rational Reminder",
           url: "https://rationalreminder.libsyn.com/",
         },
+        { id: 3, name: "Lex Fridman Podcast", url: "https://lexfridman.com/podcast/"},
       ];
     },
     episodes() {
