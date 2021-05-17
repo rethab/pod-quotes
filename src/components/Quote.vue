@@ -1,14 +1,14 @@
 <template>
   <v-card dark dense color="primary">
     <v-card-title class="caption font-weight-light">{{
-      quote.podcast.name
+      quote.episode.podcast.name
     }}</v-card-title>
     <v-card-text class="pb-0 white--text">
       <span class="headline font-weight-bold white--text">
         "{{ quote.quote }}"
       </span>
       <br />
-      <span>- {{ quote.by.name }}</span>
+      <span>- {{ quote.quoteBy.name }}</span>
     </v-card-text>
     <v-card-actions class="">
       <v-btn
@@ -37,11 +37,13 @@
   </v-card>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+import { Quote as QuoteT } from "@/service/types";
+export default Vue.extend({
   name: "Quote",
   props: {
-    quote: { type: Object, required: true },
+    quote: { type: Object as PropType<QuoteT>, required: true },
     showContextInitial: { type: Boolean, default: false },
   },
   data() {
@@ -50,10 +52,10 @@ export default {
     };
   },
   computed: {
-    tweetLink: function () {
-      let by = this.quote.by.name;
-      if (this.quote.by.twitter) {
-        by += ` (@${this.quote.by.twitter})`;
+    tweetLink(): string {
+      let by = this.quote.quoteBy.name;
+      if (this.quote.quoteBy.twitter) {
+        by += ` (@${this.quote.quoteBy.twitter})`;
       }
       let link = `https://podquotes.io/quote/${this.quote.id}`;
 
@@ -63,7 +65,5 @@ export default {
       )}`;
     },
   },
-};
+});
 </script>
-
-<style scoped></style>

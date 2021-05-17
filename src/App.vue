@@ -24,8 +24,10 @@
   </v-app>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
   name: "App",
   metaInfo: {
     title: "Pod Quotes: Memorable Quotes from Inspiring Podcasts",
@@ -71,5 +73,5 @@ export default {
       },
     ],
   },
-};
+});
 </script>
