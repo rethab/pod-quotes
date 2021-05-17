@@ -55,11 +55,15 @@
   </v-container>
 </template>
 
-<script>
-import data from "@/data/data.js";
-import Quote from "@/components/Quote";
+<script lang="ts">
+import Vue from "vue";
 
-export default {
+import Quote from "@/components/Quote.vue";
+import QuoteService from "@/service/quote-service";
+import { Person, Podcast, Quote as QuoteT } from "@/service/types";
+import { MetaInfo } from "vue-meta";
+
+export default Vue.extend({
   name: "Quotes",
   components: { Quote },
   props: {
@@ -70,13 +74,15 @@ export default {
   },
   data() {
     return {
-      selectedPodcastId: null,
-      selectedPersonId: null,
+      selectedPodcastId: undefined as number | undefined,
+      selectedPersonId: undefined as number | undefined,
+
+      quoteService: new QuoteService(),
     };
   },
-  metaInfo() {
-    if (this.quoteId) {
-      const prefix = this.singleQuote.by.name;
+  metaInfo(): MetaInfo {
+    if (this.singleQuote) {
+      const prefix = this.singleQuote.quoteBy.name;
 
       // trim quote to SEO-friendly length
       const quote = this.singleQuote.quote;
@@ -108,58 +114,40 @@ export default {
           { vmid: "gs:description", itemprop: "description", content: title },
         ],
       };
+    } else {
+      return {};
     }
   },
   computed: {
-    singleQuote: function () {
+    singleQuote(): QuoteT | undefined {
       if (!this.quoteId) return;
       return this.quotes.find((q) => q.id === this.quoteId);
     },
-    quotes: function () {
-      return this.shuffle(data().quotes())
-        .map(this.joinQuoteData)
+    quotes(): Array<QuoteT> {
+      return this.quoteService
+        .getQuotes()
         .filter(
-          (q) =>
+          (q: QuoteT) =>
             this.selectedPodcastId == null ||
-            this.selectedPodcastId === q.episode.podcastId
+            this.selectedPodcastId === q.episode.podcast.id
         )
         .filter(
-          (q) =>
+          (q: QuoteT) =>
             this.selectedPersonId == null ||
-            this.selectedPersonId === q.quoteById
+            this.selectedPersonId === q.quoteBy.id
         );
     },
-    podcasts: () => data().podcasts(),
-    people: () => data().people(),
+    podcasts(): Array<Podcast> {
+      return this.quoteService.getPodcasts();
+    },
+    people(): Array<Person> {
+      return this.quoteService.getPeople();
+    },
   },
   methods: {
     closeOverlay() {
       this.$router.push({ name: "home" });
     },
-    joinQuoteData(quote) {
-      const episode = data()
-        .episodes()
-        .find((e) => e.id === quote.episodeId);
-      const podcast = data()
-        .podcasts()
-        .find((p) => p.id === episode.podcastId);
-
-      quote.by = data()
-        .people()
-        .find((p) => p.id === quote.quoteById);
-      quote.episode = episode;
-      quote.podcast = podcast;
-      quote.show = `${podcast.name} / ${episode.name}`;
-
-      return quote;
-    },
-    shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    },
   },
-};
+});
 </script>

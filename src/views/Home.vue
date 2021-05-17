@@ -5,14 +5,14 @@
   </div>
 </template>
 
-<script>
-import Header from "@/components/Header";
-import Quotes from "@/components/Quotes";
+<script lang="ts">
+import Vue from "vue";
 
-export default {
+import Header from "@/components/Header.vue";
+import Quotes from "@/components/Quotes.vue";
+
+export default Vue.extend({
   name: "Home",
   components: { Header, Quotes },
-};
+});
 </script>
-
-<style scoped></style>
