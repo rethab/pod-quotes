@@ -113,7 +113,7 @@ export default {
   computed: {
     singleQuote: function () {
       if (!this.quoteId) return;
-      return this.quotes.find((q) => q.id === parseInt(this.quoteId));
+      return this.quotes.find((q) => q.id === this.quoteId);
     },
     quotes: function () {
       return this.shuffle(data().quotes())
