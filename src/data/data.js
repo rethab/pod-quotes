@@ -12,7 +12,11 @@ export default () => {
           name: "The Rational Reminder",
           url: "https://rationalreminder.libsyn.com/",
         },
-        { id: 3, name: "Lex Fridman Podcast", url: "https://lexfridman.com/podcast/"},
+        {
+          id: 3,
+          name: "Lex Fridman Podcast",
+          url: "https://lexfridman.com/podcast/",
+        },
       ];
     },
     episodes() {
@@ -44,6 +48,13 @@ export default () => {
           date: "2021-04-29",
           name: "Making your customers your secret weapon (with Highspot's Oliver Sharp)",
           url: "https://www.acquired.fm/episodes/making-your-customers-your-secret-weapon-with-highspots-oliver-sharp",
+        },
+        {
+          id: 5,
+          podcastId: 3,
+          date: "2020-07-18",
+          name: "#109 - Brian Kernighan: UNIX, C, AWK, and Go Programming",
+          url: "https://lexfridman.com/brian-kernighan/",
         },
       ];
     },
@@ -78,6 +89,11 @@ export default () => {
           id: 6,
           name: "Oliver Sharp",
           twitter: "ojsharp",
+        },
+        {
+          id: 7,
+          name: "Brian Kernighan",
+          web: "https://www.cs.princeton.edu/~bwk/",
         },
       ];
     },
@@ -278,6 +294,16 @@ export default () => {
           time: "69:11",
           context:
             "He is not fan of blending multiple functions together in one team. It will be difficult to find a team that is passionately world-class in two things.",
+        },
+        {
+          id: 21,
+          episodeId: 5,
+          quoteById: 7,
+          quote:
+            "In terms of programming languages you get the most bang for the buck by learning AWK.",
+          time: "36:55",
+          context:
+            "One of the inventors of AWK on why it is still relevant today",
         },
       ];
     },
