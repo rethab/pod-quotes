@@ -54,6 +54,13 @@ export const episodes: Array<Episode> = [
     name: "#109 - Brian Kernighan: UNIX, C, AWK, and Go Programming",
     url: "https://lexfridman.com/brian-kernighan/",
   },
+  {
+    id: 6,
+    podcastId: 3,
+    date: "2021-02-15",
+    name: "#161 - Jason Calacanis: Startups, Angel Investing, Capitalism, and Friendship",
+    url: "https://lexfridman.com/jason-calacanis/",
+  },
 ];
 
 export const people: Array<Person> = [
@@ -91,6 +98,11 @@ export const people: Array<Person> = [
     id: 7,
     name: "Brian Kernighan",
     web: "https://www.cs.princeton.edu/~bwk/",
+  },
+  {
+    id: 8,
+    name: "Jason Calacanis",
+    twitter: "Jason",
   },
 ];
 export const quotes: Array<Quote> = [
@@ -296,5 +308,15 @@ export const quotes: Array<Quote> = [
       "In terms of programming languages you get the most bang for the buck by learning AWK.",
     time: "36:55",
     context: "One of the inventors of AWK on why it is still relevant today",
+  },
+  {
+    id: 22,
+    episodeId: 6,
+    quoteById: 8,
+    quote:
+      "It's not the chances of success, but if it does succeed, what does the world look like.",
+    time: "11:20",
+    context:
+      "Elon Musk's thinking behind investing in Tesla and how Jason looked at Robinhood",
   },
 ];
