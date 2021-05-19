@@ -1,4 +1,4 @@
-import { episodes, people, podcasts, quotes } from "./data";
+import { episodes, people, podcasts, quotes } from "../data";
 
 test("quotes are linked to existing people", () => {
   const peopleIds = people.map((p) => p.id);
