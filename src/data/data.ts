@@ -61,6 +61,13 @@ export const episodes: Array<Episode> = [
     name: "#161 - Jason Calacanis: Startups, Angel Investing, Capitalism, and Friendship",
     url: "https://lexfridman.com/jason-calacanis/",
   },
+  {
+    id: 7,
+    podcastId: 3,
+    date: "2020-09-24",
+    name: "#126 – James Gosling: Java, JVM, Emacs, and the Early Days of Computing",
+    url: "https://lexfridman.com/james-gosling/",
+  },
 ];
 
 export const people: Array<Person> = [
@@ -103,6 +110,11 @@ export const people: Array<Person> = [
     id: 8,
     name: "Jason Calacanis",
     twitter: "Jason",
+  },
+  {
+    id: 9,
+    name: "James Gosling",
+    twitter: "errcraft",
   },
 ];
 export const quotes: Array<Quote> = [
@@ -318,5 +330,15 @@ export const quotes: Array<Quote> = [
     time: "11:20",
     context:
       "Elon Musk's thinking behind investing in Tesla and how Jason looked at Robinhood",
+  },
+  {
+    id: 23,
+    episodeId: 7,
+    quoteById: 9,
+    quote:
+      "Some of people's stupidest ideas are because they are insufficiently lazy",
+    time: "1:40:31",
+    context:
+      "His best ideas come from being lazy, but other people seem to just want to build something really complicated.",
   },
 ];
