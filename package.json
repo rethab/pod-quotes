@@ -27,6 +27,8 @@
     "@vue/cli-service": "~4.5.13",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^1.2.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.26.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -55,10 +57,20 @@
       "vue"
     ],
     "transform": {
-      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.vue$": "vue-jest",
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testURL": "http://localhost/",
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "testMatch": [
+      "**/__tests__/*.[jt]s?(x)"
+    ],
+    "setupFiles": [
+      "<rootDir>/test-setup.ts"
+    ]
   }
 }
