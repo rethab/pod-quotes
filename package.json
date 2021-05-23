@@ -69,6 +69,8 @@
     "testMatch": [
       "**/__tests__/*.[jt]s?(x)"
     ],
-    "testEnvironment": "node"
+    "setupFiles": [
+      "<rootDir>/test-setup.ts"
+    ]
   }
 }
