@@ -1,31 +1,26 @@
 import { episodes, people, podcasts, quotes } from "./data";
 
 test("quotes are linked to existing people", () => {
+  const peopleIds = people.map((p) => p.id);
   quotes.forEach((q) => {
-    expect(people.map((p) => p.id)).toEqual(
-      expect.arrayContaining([q.quoteById])
-    );
+    expect(peopleIds).toEqual(expect.arrayContaining([q.quoteById]));
     if (q.quotedById) {
-      expect(people.map((p) => p.id)).toEqual(
-        expect.arrayContaining([q.quotedById])
-      );
+      expect(peopleIds).toEqual(expect.arrayContaining([q.quotedById]));
     }
   });
 });
 
 test("quotes are linked to existing episodes", () => {
+  const episodeIds = episodes.map((e) => e.id);
   quotes.forEach((q) => {
-    expect(episodes.map((e) => e.id)).toEqual(
-      expect.arrayContaining([q.episodeId])
-    );
+    expect(episodeIds).toEqual(expect.arrayContaining([q.episodeId]));
   });
 });
 
 test("episodes are linked to existing podcasts", () => {
+  const podcastIds = podcasts.map((p) => p.id);
   episodes.forEach((e) => {
-    expect(podcasts.map((p) => p.id)).toEqual(
-      expect.arrayContaining([e.podcastId])
-    );
+    expect(podcastIds).toEqual(expect.arrayContaining([e.podcastId]));
   });
 });
 
