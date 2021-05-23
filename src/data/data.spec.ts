@@ -2,25 +2,29 @@ import { episodes, people, podcasts, quotes } from "./data";
 
 test("quotes are linked to existing people", () => {
   quotes.forEach((q) => {
-    const quoteBy = people.find((p) => p.id === q.quoteById);
-    expect(quoteBy).toBeDefined();
+    expect(people.map((p) => p.id)).toEqual(
+      expect.arrayContaining([q.quoteById])
+    );
     if (q.quotedById) {
-      const quotedBy = people.find((p) => p.id === q.quotedById);
-      expect(quotedBy).toBeDefined();
+      expect(people.map((p) => p.id)).toEqual(
+        expect.arrayContaining([q.quotedById])
+      );
     }
   });
 });
 
 test("quotes are linked to existing episodes", () => {
   quotes.forEach((q) => {
-    const episode = episodes.find((e) => e.id === q.episodeId);
-    expect(episode).toBeDefined();
+    expect(episodes.map((e) => e.id)).toEqual(
+      expect.arrayContaining([q.episodeId])
+    );
   });
 });
 
 test("episodes are linked to existing podcasts", () => {
   episodes.forEach((e) => {
-    const podcast = podcasts.find((p) => p.id === e.podcastId);
-    expect(podcast).toBeDefined();
+    expect(podcasts.map((p) => p.id)).toEqual(
+      expect.arrayContaining([e.podcastId])
+    );
   });
 });
