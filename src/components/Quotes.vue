@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-overlay :value="!!singleQuote" :opacity="0.85">
+    <v-overlay v-if="!!singleQuote" :opacity="0.85">
       <v-card v-click-outside="closeOverlay" elevation="0" color="transparent">
         <v-card-actions color="white" class="pb-0">
           <v-spacer />
