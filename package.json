@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "core-js": "^3.12.1",
-    "vue": "^2.6.12",
+    "vue": "^2.6.14",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.5.1",
     "vuetify": "^2.5.1"
@@ -41,7 +41,7 @@
     "typescript": "^4.2.4",
     "vue-cli-plugin-vuetify": "~2.4.1",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.12",
+    "vue-template-compiler": "^2.6.14",
     "vuetify-loader": "^1.7.2"
   },
   "browserslist": [
